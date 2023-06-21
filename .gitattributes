@@ -1,0 +1,2 @@
+data/ideal-v3.ttl filter=lfs diff=lfs merge=lfs -text
+data/idealAminoSeqs.txt filter=lfs diff=lfs merge=lfs -text
