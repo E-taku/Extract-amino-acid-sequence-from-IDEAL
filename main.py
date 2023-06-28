@@ -36,9 +36,9 @@ def writeSeqsCutByLengthToFile(residuesNum: int):
         if not(os.path.exists(dirname)):
             os.mkdir(dirname)
         # bisect_leftなので左準拠
-        dirname = "./data/every{}/{}~{}/".format(residuesNum, cutLengthList[idx-1], cutLengthList[idx])
-        if not(os.path.exists(dirname)):
-            os.mkdir(dirname)
+        # dirname = "./data/every{}/{}~{}/".format(residuesNum, cutLengthList[idx-1], cutLengthList[idx])
+        # if not(os.path.exists(dirname)):
+        #     os.mkdir(dirname)
         filePath = "{}{}~{}.txt".format(dirname, cutLengthList[idx-1], cutLengthList[idx])
         with open(filePath, mode='a') as f:
             f.write(acc + " " + seq + "\n")
@@ -48,4 +48,4 @@ ideal_data_path = './data/ideal-v3.ttl'
 writeFilePath = './data/idealAminoSeqs.txt'
 aminoSeqs = extractSeqs(ideal_data_path)
 writeSeqsToFile(ideal_data_path, aminoSeqs)
-writeSeqsCutByLengthToFile(100)
+writeSeqsCutByLengthToFile(500)
